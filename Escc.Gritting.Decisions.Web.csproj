@@ -41,6 +41,9 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ContentManagement.WebControls, Version=5.0.1200.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>S:\_Reference DLLs\Microsoft Content Management Server 2002\Microsoft.ContentManagement.WebControls.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -64,6 +67,7 @@
     <Content Include="css\gritting.css" />
     <Content Include="decisions.aspx" />
     <Content Include="decisionsrss.xslt" />
+    <Content Include="CurrentDecisionMicrosoftCms.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -90,6 +94,13 @@
       <DependentUpon>decisionsxml.ashx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CurrentDecisionMicrosoftCms.ascx.cs">
+      <DependentUpon>CurrentDecisionMicrosoftCms.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CurrentDecisionMicrosoftCms.ascx.designer.cs">
+      <DependentUpon>CurrentDecisionMicrosoftCms.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="decisionsxml.ashx" />
@@ -101,6 +112,10 @@
     <ProjectReference Include="..\..\Inetpub\wwwroot\eastsussex.gov.uk.csproj">
       <Project>{1426FEF0-23DC-4C23-AE15-67F2527BD741}</Project>
       <Name>eastsussex.gov.uk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VS Projects\eastsussex.gov.uk projects\EsccWebTeam.Cms\EsccWebTeam.Cms.csproj">
+      <Project>{6710E9EE-DEAB-4569-ACE6-F10159D6D447}</Project>
+      <Name>EsccWebTeam.Cms</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\VS Projects\_Libraries for re-use\EsccWebTeam.Data.Web\EsccWebTeam.Data.Web.csproj">
       <Project>{9C56D3DD-4952-4A1B-9AD6-907A1142872F}</Project>

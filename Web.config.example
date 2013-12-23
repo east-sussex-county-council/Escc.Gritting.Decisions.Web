@@ -5,6 +5,7 @@
         <compilation debug="true" targetFramework="4.0" />
         <pages masterPageFile="~/masterpages/mobile.master">
             <controls>
+                <add tagPrefix="Cms" namespace="EsccWebTeam.Cms" assembly="EsccWebTeam.Cms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=06fad7304560ae6f"/>
                 <add tagPrefix="EastSussexGovUK" namespace="EsccWebTeam.EastSussexGovUK" assembly="EsccWebTeam.EastSussexGovUK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=06fad7304560ae6f"/>
                 <add tagPrefix="EastSussexGovUK" tagName="TwitterSearch" src="~/masterpages/controls/twittersearch.ascx"/>
                 <add tagPrefix="NavigationControls" namespace="EsccWebTeam.NavigationControls" assembly="EsccWebTeam.NavigationControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=06fad7304560ae6f"/>
