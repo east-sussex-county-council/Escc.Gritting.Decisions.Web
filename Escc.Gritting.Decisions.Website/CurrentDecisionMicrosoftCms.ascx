@@ -1,6 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CurrentDecisionMicrosoftCms.ascx.cs" Inherits="Escc.Gritting.Decisions.Web.CurrentDecisionMicrosoftCms" %>
 <Egms:Css runat="server" Files="Gritting" />
-<Cms:SectionLayoutPlaceholderControl ID="phSection" runat="server" Label="Layout for section " ItemConfigSection="EsccWebTeam.EastSussexCC/TopicSectionLayouts" />
 <table class="data gritting">
 <thead><tr><th scope="col">Time of update</th><th scope="col">Gritting zone</th><th scope="col">Action</th><th scope="col" class="actiontime">Time</th></tr></thead>
 <tbody>

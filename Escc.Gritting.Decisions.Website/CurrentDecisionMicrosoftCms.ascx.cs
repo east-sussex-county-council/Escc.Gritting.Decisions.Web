@@ -11,7 +11,7 @@ namespace Escc.Gritting.Decisions.Web
     /// <summary>
     /// Display the current gritting decision within a Microsoft CMS page
     /// </summary>
-    public partial class CurrentDecisionMicrosoftCms : TopicSection
+    public partial class CurrentDecisionMicrosoftCms : UserControl
     {
         /// <summary>
         /// Handles the Load event of the Page control.
@@ -20,11 +20,6 @@ namespace Escc.Gritting.Decisions.Web
         /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            this.phSection.PlaceholderToBind = this.PlaceholderToBindSection;
-            this.phSection.Label += " " + SectionLayoutManager.ParsePlaceholderNumber(this.PlaceholderToBindSection);
-
-
             var decisions = DecisionManager.ReadLatestRouteSetDecisions();
             if (decisions.Count == 0)
             {

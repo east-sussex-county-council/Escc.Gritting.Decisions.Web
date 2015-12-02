@@ -13,15 +13,6 @@ namespace Escc.Gritting.Decisions.Web {
     public partial class CurrentDecisionMicrosoftCms {
         
         /// <summary>
-        /// phSection control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::EsccWebTeam.Cms.SectionLayoutPlaceholderControl phSection;
-        
-        /// <summary>
         /// table control.
         /// </summary>
         /// <remarks>
