@@ -10,7 +10,7 @@
 namespace Escc.Gritting.Decisions.Web {
     
     
-    public partial class CurrentDecisionMicrosoftCms {
+    public partial class CurrentDecision {
         
         /// <summary>
         /// table control.

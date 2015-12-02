@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="decisions.aspx.cs" Inherits="Escc.Gritting.Decisions.Web.decisions" %>
 <asp:Content runat="server" ContentPlaceHolderID="metadata">
-    <Egms:MetadataControl runat="server" 
+    <Metadata:MetadataControl runat="server" 
         Title="Gritting decisions"
         Description="See the decisions made by East Sussex County Council about where and when to grit roads. Decisions are made at least once a day and more often during periods of severe weather."
         DateCreated="2011-12-02"
@@ -9,7 +9,7 @@
         LgilType="Providing information"
         RssFeedUrl="http://www.eastsussex.gov.uk/roadsandtransport/roads/maintenance/saltingandgritting/decisionsrss.ashx"
     />
-    <Egms:Css runat="server" Files="Gritting" />
+    <ClientDependency:Css runat="server" Files="Gritting" />
     <link rel="alternate" type="text/xml" href="decisionsxml.ashx" />
 </asp:Content>
 

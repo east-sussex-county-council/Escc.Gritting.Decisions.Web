@@ -4,14 +4,13 @@ using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web.UI;
-using EsccWebTeam.Cms;
 
 namespace Escc.Gritting.Decisions.Web
 {
     /// <summary>
-    /// Display the current gritting decision within a Microsoft CMS page
+    /// Display the current gritting decision within an ASPX page
     /// </summary>
-    public partial class CurrentDecisionMicrosoftCms : UserControl
+    public partial class CurrentDecision : UserControl
     {
         /// <summary>
         /// Handles the Load event of the Page control.
