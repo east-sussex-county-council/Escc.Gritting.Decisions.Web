@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using EsccWebTeam.Data.Web;
 
 namespace Escc.Gritting.Decisions.Web
 {
@@ -11,7 +12,7 @@ namespace Escc.Gritting.Decisions.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.pageMetadata.RssFeedUrl = Iri.MakeAbsolute(new Uri("decisionsrss.ashx", UriKind.Relative)).ToString();
         }
     }
 }

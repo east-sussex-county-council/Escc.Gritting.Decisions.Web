@@ -22,6 +22,9 @@ namespace Escc.Gritting.Decisions.Web
             this.decisionArchive.DataSource = decisions;
             this.decisionArchive.DataBind();
 
+            this.pageMetadata.RssFeedUrl = Iri.MakeAbsolute(new Uri("decisionsrss.ashx", UriKind.Relative)).ToString();
+
+
 #if !DEBUG
             Http.CacheFor(0, 10);
 #endif

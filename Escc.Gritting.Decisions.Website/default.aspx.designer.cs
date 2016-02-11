@@ -11,5 +11,14 @@ namespace Escc.Gritting.Decisions.Web {
     
     
     public partial class _default {
+        
+        /// <summary>
+        /// pageMetadata control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Escc.Web.Metadata.MetadataControl pageMetadata;
     }
 }
