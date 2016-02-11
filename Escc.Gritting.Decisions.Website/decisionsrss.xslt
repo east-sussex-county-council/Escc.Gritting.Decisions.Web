@@ -4,8 +4,8 @@
     xmlns:decisions="http://www.eastsussex.gov.uk/EsccWebTeam.Gritting"
 >
   <xsl:output method="xml" indent="yes"/>
-  <xsl:include href="\inetpub\wwwroot\masterpages\rss\dates.xslt"/>
-  <xsl:include href="\inetpub\wwwroot\masterpages\rss\rss-utilities.xslt"/>
+  <xsl:include href="..\..\Escc.EastSussexGovUK\Escc.EastSussexGovUK\masterpages\rss\dates.xslt"/>
+  <xsl:include href="..\..\Escc.EastSussexGovUK\Escc.EastSussexGovUK\masterpages\rss\rss-utilities.xslt"/>
 
   <!-- Require the current date in two formats: RFC 822 for display in RSS feed, and ISO 8601 for numeric comparison of dates. 
          Doing numeric comparison of dates because .NET only supports XPath 1.0 and XPath 1.0 doesn't understand dates. -->
