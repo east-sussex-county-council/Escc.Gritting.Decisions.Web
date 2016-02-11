@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,14 +13,14 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Escc.Gritting.Decisions.Web</RootNamespace>
     <AssemblyName>Escc.Gritting.Decisions.Web</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
-    <AssemblyOriginatorKeyFile>s:\_strong names\esccdev.snk</AssemblyOriginatorKeyFile>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +33,7 @@
     <DocumentationFile>bin\Escc.Gritting.Decisions.Web.XML</DocumentationFile>
     <RunCodeAnalysis>true</RunCodeAnalysis>
     <CodeAnalysisRuleSet>S:\_Standards\VS.net Code Analysis\EsccWebTeam.CodeAnalysis.WebApp.Strict.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,54 +43,80 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Escc.Gritting.Decisions.Web.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EcmaScript.NET, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YUICompressor.NET.MSBuild.2.7.0.0\lib\NET20\EcmaScript.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Escc.AddressAndPersonalDetails, Version=1.0.0.0, Culture=neutral, PublicKeyToken=06fad7304560ae6f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Escc.AddressAndPersonalDetails.1.0.0\lib\Escc.AddressAndPersonalDetails.dll</HintPath>
+      <HintPath>..\packages\Escc.AddressAndPersonalDetails.2.0.0\lib\Escc.AddressAndPersonalDetails.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Escc.ClientDependencyFramework.WebForms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=06fad7304560ae6f, processorArchitecture=MSIL">
       <HintPath>..\packages\Escc.ClientDependencyFramework.WebForms.1.0.0\lib\Escc.ClientDependencyFramework.WebForms.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Escc.Gritting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Escc.Gritting.1.0.2\lib\Escc.Gritting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Escc.Web.Metadata, Version=1.0.0.0, Culture=neutral, PublicKeyToken=06fad7304560ae6f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Escc.Web.Metadata.1.0.0\lib\Escc.Web.Metadata.dll</HintPath>
+      <HintPath>..\packages\Escc.Web.Metadata.1.0.1\lib\Escc.Web.Metadata.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Exceptionless, Version=1.5.2121.0, Culture=neutral, PublicKeyToken=fc181f0a46f65747, processorArchitecture=MSIL">
-      <HintPath>..\packages\Exceptionless.1.5.2121\lib\net40\Exceptionless.dll</HintPath>
+      <HintPath>..\packages\Exceptionless.1.5.2121\lib\net45\Exceptionless.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Exceptionless.Models, Version=1.5.2121.0, Culture=neutral, PublicKeyToken=fc181f0a46f65747, processorArchitecture=MSIL">
-      <HintPath>..\packages\Exceptionless.1.5.2121\lib\net40\Exceptionless.Models.dll</HintPath>
+      <HintPath>..\packages\Exceptionless.1.5.2121\lib\net45\Exceptionless.Models.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.ContentManagement.WebControls, Version=5.0.1200.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-      <HintPath>S:\_Reference DLLs\Microsoft Content Management Server 2002\Microsoft.ContentManagement.WebControls.dll</HintPath>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\YUICompressor.NET.2.0.0.0\lib\NET20\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Yahoo.Yui.Compressor, Version=2.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YUICompressor.NET.MSBuild.2.7.0.0\lib\NET20\Yahoo.Yui.Compressor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor.Build.MsBuild, Version=2.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YUICompressor.NET.MSBuild.2.7.0.0\lib\NET20\Yahoo.Yui.Compressor.Build.MsBuild.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="CustomDictionary.xml" />
-    <Content Include="css\gritting.css" />
+    <None Include="css\gritting.css" />
+    <Content Include="css\min\gritting.css" />
     <Content Include="decisions.aspx" />
     <Content Include="decisionsrss.xslt" />
     <Content Include="CurrentDecision.ascx" />
@@ -103,7 +130,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="yuicompressor-2.4.6.jar" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="decisions.aspx.cs">
@@ -154,25 +180,19 @@
       <Project>{1c429378-dbf2-4af7-88ac-c059aa163682}</Project>
       <Name>EsccWebTeam.HouseStyle</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Escc.Cms\EsccWebTeam.Cms.csproj">
-      <Project>{6710E9EE-DEAB-4569-ACE6-F10159D6D447}</Project>
-      <Name>EsccWebTeam.Cms</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Escc.NavigationControls\EsccWebTeam.NavigationControls.csproj">
       <Project>{0323F668-1723-44A1-8C94-F91DC59EF315}</Project>
       <Name>EsccWebTeam.NavigationControls</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Escc.Gritting\Escc.Gritting.csproj">
-      <Project>{EDBBFB8E-2A83-4EB8-9A38-1F1326375A9D}</Project>
-      <Name>Escc.Gritting</Name>
-    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="css\min\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="packages.config" />
+    <None Include="packages.config" />
+    <Content Include="gritting_zones.pdf" />
     <None Include="Web.example.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YUICompressor.msbuild">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -193,8 +213,9 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>if "$(ConfigurationName)" == "Release" del "$(ProjectDir)css\min\*.*" /Q
-if "$(ConfigurationName)" == "Release" java -jar "$(ProjectDir)yuicompressor-2.4.6.jar" "$(ProjectDir)css/gritting.css" &gt; "$(ProjectDir)css/min/gritting.css"</PostBuildEvent>
+    <PostBuildEvent>if "$(ConfigurationName)" == "Release" (if not exist "$(ProjectDir)css\min" md "$(ProjectDir)css\min")
+if "$(ConfigurationName)" == "Release" del "$(ProjectDir)css\min\*.*" /Q 
+if "$(ConfigurationName)" == "Release" "$(MSBuildBinPath)\msbuild.exe" "$(ProjectDir)YUICompressor.msbuild" /p:ConfigurationName=$(ConfigurationName)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

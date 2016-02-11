@@ -40,7 +40,7 @@
                     </tbody>
                     </table>
 
-                    <p><a href="/NR/rdonlyres/7FEE65B0-CF9C-43C1-B243-687300FE1DAD/0/gritting_zones.pdf" type="application/pdf"><span class="pdf">Map</span> of gritting zones <span class="downloadDetail">(PDF, 155KB)</span></a></p>
+                    <p><a href="/NR/rdonlyres/7FEE65B0-CF9C-43C1-B243-687300FE1DAD/0/gritting_zones.pdf" type="application/pdf">Map of gritting zones <span class="downloadDetail">(PDF, 155KB)</span></a></p>
                     <p><a href="decisionsrss.ashx" class="rssFeed rss subscribe" rel="alternate" type="application/rss+xml">Subscribe by RSS to gritting decisions</a></p>
                     <p><a class="email subscribe" href="http://blogtrottr.com/?subscribe=http%3A%2F%2Fwww.eastsussex.gov.uk%2Froadsandtransport%2Froads%2Fmaintenance%2Fsaltingandgritting%2Fdecisionsrss.ashx">Subscribe by email to gritting decisions</a></p>
 
