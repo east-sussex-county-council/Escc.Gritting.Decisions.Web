@@ -65,6 +65,10 @@
       <HintPath>..\packages\Escc.ClientDependencyFramework.WebForms.1.0.0\lib\Escc.ClientDependencyFramework.WebForms.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Escc.Dates, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Escc.Dates.1.0.0\lib\Escc.Dates.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Escc.Gritting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Escc.Gritting.1.0.2\lib\Escc.Gritting.dll</HintPath>
       <Private>True</Private>
@@ -179,10 +183,6 @@
     <ProjectReference Include="..\..\Escc.EastSussexGovUK\Escc.EastSussexGovUK\EsccWebTeam.EastSussexGovUK.csproj">
       <Project>{1426fef0-23dc-4c23-ae15-67f2527bd741}</Project>
       <Name>EsccWebTeam.EastSussexGovUK</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Escc.HouseStyle\EsccWebTeam.HouseStyle.csproj">
-      <Project>{1c429378-dbf2-4af7-88ac-c059aa163682}</Project>
-      <Name>EsccWebTeam.HouseStyle</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Escc.NavigationControls\EsccWebTeam.NavigationControls.csproj">
       <Project>{0323F668-1723-44A1-8C94-F91DC59EF315}</Project>

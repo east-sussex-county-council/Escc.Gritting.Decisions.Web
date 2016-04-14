@@ -6,7 +6,7 @@ using System.Web;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Xml.Xsl;
-using eastsussexgovuk.webservices.TextXhtml.HouseStyle;
+using Escc.Dates;
 using EsccWebTeam.Data.Web;
 
 namespace Escc.Gritting.Decisions.Web
@@ -45,7 +45,7 @@ namespace Escc.Gritting.Decisions.Web
                     xslt.Load(Path.GetDirectoryName(context.Server.MapPath(context.Request.Url.AbsolutePath)) + Path.DirectorySeparatorChar + "decisionsrss.xslt");
 
                     var args = new XsltArgumentList();
-                    args.AddParam("Rfc822Date", String.Empty, DateTimeFormatter.Rfc822DateTime(DateTime.Now));
+                    args.AddParam("Rfc822Date", String.Empty, DateTime.Now.ToUkDateTime().ToRfc822DateTime());
                     //this.items.TransformArgumentList.AddParam("Iso8601Date", String.Empty, DateTimeFormatter.Iso8601DateTime(DateTime.Now));
                     args.AddParam("CurrentUrl", String.Empty, context.Request.Url.ToString());
                     args.AddParam("HtmlVersionUrl", String.Empty, Iri.MakeAbsolute(new Uri("decisions.aspx", UriKind.Relative)).ToString());

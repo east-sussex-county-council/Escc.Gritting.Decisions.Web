@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web.UI;
+using Escc.Dates;
 
 namespace Escc.Gritting.Decisions.Web
 {
@@ -111,7 +112,7 @@ namespace Escc.Gritting.Decisions.Web
         private void AddDecisionToTable(RouteSetDecision decision)
         {
             var routeRow = new StringBuilder("<tr><td>");
-            routeRow.Append(Server.HtmlEncode(eastsussexgovuk.webservices.TextXhtml.HouseStyle.DateTimeFormatter.ShortBritishDateNoYearWithTime(decision.DecisionTime)));
+            routeRow.Append(Server.HtmlEncode(decision.DecisionTime.ToShortBritishDateNoYear() + ", " + decision.DecisionTime.ToBritishTime()));
             routeRow.Append("</td><td>");
             routeRow.Append(Server.HtmlEncode(decision.RouteSet.RouteSetName));
             routeRow.Append("</td><td class=\"action ");
@@ -121,7 +122,7 @@ namespace Escc.Gritting.Decisions.Web
             routeRow.Append("</td><td class=\"actiontime\">");
             if (decision.ActionTime.HasValue)
             {
-                routeRow.Append(Server.HtmlEncode(eastsussexgovuk.webservices.TextXhtml.HouseStyle.DateTimeFormatter.Time(decision.ActionTime.Value)));
+                routeRow.Append(Server.HtmlEncode(decision.ActionTime.Value.ToBritishTime()));
             }
             routeRow.Append("</td></tr>\n");
             this.table.Controls.Add(new LiteralControl(routeRow.ToString()));
